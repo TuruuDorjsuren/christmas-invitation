@@ -1,0 +1,333 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FA6775;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    justify-content: space-between; /* Space GIFs evenly */
+    align-items: flex-start; /* Align to the top */
+    padding: 20px 10%;
+}
+
+/* Left Section */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Add space between elements */
+}
+
+.left-section .top-text {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.left-gif {
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 50px; /* Move the right section lower */
+}
+
+.right-gif {
+    max-width: 250px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.right-section p {
+    text-align: right;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Centered Content */
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.center-content h1 {
+    font-size: 2rem; /* Large caption text */
+    font-family: 'Poppins', sans-serif; /* Softer font style */
+    font-weight: 800; /* Light weight for a softer look */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    letter-spacing: 2px; /* Adds spacing for a clean appearance */
+}
+
+
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: row; /* Align buttons horizontally */
+    gap: 20px; /* Add space between buttons */
+    justify-content: center; /* Center align buttons horizontally */
+    align-items: center; /* Align buttons vertically */
+}
+
+/* General Button Styles */
+.action-button {
+    background-color: #F52549;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover {
+    background-color: #fff;
+    color: #F52549;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Teleport Button */
+#no-button {
+    position: relative; /* Allow teleportation within a small range */
+    transition: top 0.3s ease, left 0.3s ease; /* Smooth teleportation */
+}
+/* Snowflakes on Both Sides */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100px; /* Increased width for larger snowflake area */
+    pointer-events: none; /* Prevent interaction */
+    z-index: 10;
+}
+
+.snowflakes.left {
+    left: 0; /* Left side */
+}
+
+.snowflakes.right {
+    right: 0; /* Right side */
+}
+
+/* Individual Snowflake */
+.snowflakes span {
+    position: absolute;
+    top: -100px;
+    font-size: 25px; /* Increased snowflake size */
+    color: #FFF;
+    animation: fall linear infinite;
+}
+
+/* Randomized positions and animation for 20 snowflakes */
+.snowflakes span:nth-child(1)  { left: 5%;  animation-duration: 5s; animation-delay: 0s; }
+.snowflakes span:nth-child(2)  { left: 10%; animation-duration: 6s; animation-delay: 1s; }
+.snowflakes span:nth-child(3)  { left: 15%; animation-duration: 7s; animation-delay: 0.5s; }
+.snowflakes span:nth-child(4)  { left: 20%; animation-duration: 8s; animation-delay: 1.5s; }
+.snowflakes span:nth-child(5)  { left: 25%; animation-duration: 6s; animation-delay: 2s; }
+.snowflakes span:nth-child(6)  { left: 30%; animation-duration: 9s; animation-delay: 0.8s; }
+.snowflakes span:nth-child(7)  { left: 35%; animation-duration: 5s; animation-delay: 1.2s; }
+.snowflakes span:nth-child(8)  { left: 40%; animation-duration: 8s; animation-delay: 0.7s; }
+.snowflakes span:nth-child(9)  { left: 45%; animation-duration: 7s; animation-delay: 1.4s; }
+.snowflakes span:nth-child(10) { left: 50%; animation-duration: 6s; animation-delay: 0.9s; }
+.snowflakes span:nth-child(11) { left: 55%; animation-duration: 5.5s; animation-delay: 1.1s; }
+.snowflakes span:nth-child(12) { left: 60%; animation-duration: 6.5s; animation-delay: 0.4s; }
+.snowflakes span:nth-child(13) { left: 65%; animation-duration: 8.5s; animation-delay: 1.7s; }
+.snowflakes span:nth-child(14) { left: 70%; animation-duration: 5.2s; animation-delay: 0.3s; }
+.snowflakes span:nth-child(15) { left: 75%; animation-duration: 7.5s; animation-delay: 1.3s; }
+.snowflakes span:nth-child(16) { left: 80%; animation-duration: 9s; animation-delay: 0.6s; }
+.snowflakes span:nth-child(17) { left: 85%; animation-duration: 6.8s; animation-delay: 1.8s; }
+.snowflakes span:nth-child(18) { left: 90%; animation-duration: 7.2s; animation-delay: 0.2s; }
+.snowflakes span:nth-child(19) { left: 95%; animation-duration: 8s; animation-delay: 1.6s; }
+.snowflakes span:nth-child(20) { left: 98%; animation-duration: 6s; animation-delay: 0.5s; }
+
+/* Snowflake Animation */
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through */
+    overflow: hidden;
+}
+/* General Heart Styling */
+.heart {
+    position: absolute;
+    font-size: 40px; /* Default size */
+    animation: floatAcross 3s ease-in-out forwards, glassyGlow 2s infinite alternate; /* Smooth floating and glowing animations */
+    opacity: 1;
+    color: red; /* Default solid red hearts */
+}
+
+/* Gradient Heart Styling */
+.heart.gradient-heart {
+    background: linear-gradient(to right, red 50%, #ffc2c2 50%); /* Half red, half light pink */
+    background-clip: text; /* Standard property for text clipping */
+    -webkit-background-clip: text; /* WebKit-specific property for Safari/Chrome */
+    -webkit-text-fill-color: transparent; /* WebKit property for text transparency */
+}
+
+/* Glassy Glow Effect */
+.heart {
+    filter: blur(0.3px); /* Subtle blur for glassy effect */
+    text-shadow: 
+        0 0 15px rgba(255, 200, 200, 0.9), /* Inner bright white glow */
+        0 0 30px rgba(255, 150, 150, 0.7), /* Mid red-white glow */
+        0 0 50px rgba(255, 100, 100, 0.5); /* Outer softer red glow */
+}
+
+/* Floating animation */
+@keyframes floatAcross {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--random-x), -500px) scale(0.8); /* Move randomly and float higher */
+    }
+}
+
+/* Glassy Glow Animation */
+@keyframes glassyGlow {
+    0% {
+        text-shadow: 
+            0 0 15px rgba(255, 200, 200, 0.9), /* Bright inner white glow */
+            0 0 30px rgba(255, 150, 150, 0.7), /* Mid red-white glow */
+            0 0 50px rgba(255, 100, 100, 0.5); /* Outer red glow */
+        filter: blur(0.3px); /* Subtle glassy blur */
+    }
+    100% {
+        text-shadow: 
+            0 0 20px rgba(255, 255, 255, 1), /* Brighter white glow */
+            0 0 40px rgba(255, 180, 180, 0.8), /* Enhanced mid glow */
+            0 0 60px rgba(255, 150, 150, 0.6); /* More intense outer glow */
+        filter: blur(0.7px); /* Slightly increased blur for dynamic effect */
+    }
+}
+
+/* Style for the GIF on Page 2 */
+.top-gif {
+    display: block; /* Ensure it's treated as a block-level element */
+    margin: 0 auto 20px; /* Center the GIF and add margin below it */
+    max-width: 100%; /* Prevent the GIF from exceeding container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for aesthetics */
+}
+.tilted-text {
+    position: relative; /* Allow positioning above the GIF */
+    top: -20px; /* Adjust position to move it above the GIF */
+    text-align: left;
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 400; /* Make the text bold */
+    color: #fff; /* White text color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visibility */
+    transform: rotate(-10deg); /* Tilt the text */
+    margin-bottom: 20px; /* Space between the text and the GIF */
+}
+
+/* GIF Styling */
+.left-gif,
+.right-gif {
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.gif-container {
+    display: inline-block; /* Inline to place GIFs side-by-side */
+    margin: 10px; /* Space between GIFs */
+}
+
+.center-gif {
+    max-width: 340px;
+    height: auto;
+    border-radius: 15px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for aesthetics */
+}
+
+/* Slider Styling */
+.slider {
+    -webkit-appearance: none; /* Remove default slider styling */
+    appearance: none;
+    width: 70%; /* Increased width for a longer slider */
+    height: 10px; /* Slider height */
+    background: #fff; /* White background */
+    border-radius: 10px; /* Rounded slider */
+    outline: none; /* Remove outline */
+    margin: 20px auto; /* Center the slider and add spacing */
+    cursor: pointer; /* Pointer cursor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+}
+
+/* Slider Thumb Styling */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default thumb styling */
+    appearance: none;
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    background: #F52549; /* Thumb color */
+    border-radius: 50%; /* Rounded thumb */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow for thumb */
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #F52549;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* Big Final GIF Styling */
+.final-gif {
+    max-width: 80%; /* Keep it large but responsive */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Center it and add spacing below */
+    border-radius: 15px; /* Optional: Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add depth */
+}

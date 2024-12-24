@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Snowflakes on Left -->
+    <div class="snowflakes left">
+        <span>❄</span><span>❄</span><span>❄</span><span>❄</span><span>❄</span>
+        <span>❄</span><span>❄</span><span>❄</span><span>❄</span><span>❄</span>
+        <span>❄</span><span>❄</span><span>❄</span><span>❄</span><span>❄</span>
+        <span>❄</span><span>❄</span><span>❄</span><span>❄</span><span>❄</span>
+    </div>
+
+    <!-- Snowflakes on Right -->
+    <div class="snowflakes right">
+        <span>❄</span><span>❄</span><span>❄</span><span>❄</span><span>❄</span>
+        <span>❄</span><span>❄</span><span>❄</span><span>❄</span><span>❄</span>
+        <span>❄</span><span>❄</span><span>❄</span><span>❄</span><span>❄</span>
+        <span>❄</span><span>❄</span><span>❄</span><span>❄</span><span>❄</span>
+    </div>
+
+    <!-- Main Content with GIF and Text -->
+    <div class="center-content">
+        
+        <!-- Insert GIF using URL -->
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExN295dTBqaHU5b2xvMjdpZXFvMGUyeWUzbjdtMDE4MmU4Y2Y5OWw4YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif" 
+            alt="Fun Christmas GIF" class="top-gif">
+        <!-- Heading Text -->
+        <h1>Rate how exited are you (˶ᵔ ᵕ ᵔ˶)</h1>
+
+        <!-- Rating Slider -->
+        <input type="range" id="rating-slider" class="slider" min="0" max="100">
+
+        <!-- Button with dynamic next page -->
+        <button class="action-button" id="yes-button" data-next-page="page8.html">
+            ⋆꙳•❅*🎄*❆•꙳⋆ Proceed to the finale ⋆꙳•❅*🎄*❆•꙳⋆
+        </button>
+    </div>
+
+    <!-- Heart Animation Container -->
+    <div class="heart-container" id="heart-container"></div>
+
+    <!-- Include Shared and Page-Specific Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/page7.js"></script>
+</body>
+</html>
